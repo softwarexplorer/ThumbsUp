@@ -10,13 +10,21 @@ import UIKit
 import FirebaseDatabase
 
 class RideDataViewController: UIViewController {
-    
-    var databaseReference : DatabaseReference!
-    var databaseHandle : DatabaseHandle!
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print("Hi there!!!!!!!!!!!")
+        var reference : DatabaseReference!
+        reference = Database.database().reference()
+        _ = reference.child("Drivers").observeSingleEvent(of: .value) { (snapshot) in
+            let value  = snapshot.value as? NSDictionary;
+//            let thing = value?["DriverName"] as? String ?? "";
+            print("Here.......")
+            print(value)
+//            print(thing)
+        };
+//        print(drivers)
         //Read data from firebase database
 //        databaseHandle = databaseReference.child("Drivers").observe(.childAdded, with: { (data) in
 //            let name : String = (data.value as? String)!
