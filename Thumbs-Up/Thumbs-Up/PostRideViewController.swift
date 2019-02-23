@@ -1,10 +1,8 @@
 //
 //  PostRideViewController.swift
-//  ShareRide
-//
-//  Created by Le, Dung Tien on 4/19/17.
-//  Copyright © 2017 Dung Le. All rights reserved.
-//  THIS IS A VIEW with a bunch of text fields that users need to fill out WHEN POSTING A RIDE
+//  Alex Eschenauer
+//  WinterWonderHack 2019
+//  TODO: FIXME!!
 
 import UIKit
 import FirebaseDatabase
@@ -22,8 +20,8 @@ class PostRideViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var postButton: UIButton!
     
     // MARK: Properties
-    let ref = FIRDatabase.database().reference(withPath: "list-of-rides")
-    let usersRef = FIRDatabase.database().reference(withPath: "users")
+    let ref = FIRDatabase.database().reference(withPath: "Drivers")
+    let usersRef = FIRDatabase.database().reference(withPath: "Users")
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -101,13 +99,20 @@ class PostRideViewController: UIViewController, UITextFieldDelegate {
             present(alertController, animated: true, completion: nil)
         
         } else {
-            let currentUserID = FIRAuth.auth()?.currentUser?.uid
-            let currentUserEmail = FIRAuth.auth()?.currentUser?.email
+            //TODO: NOT HARDCODE? THAT WOILD BE GOOD.
+            let currentUserID = FIRAuth.auth()?.currentUser?.uid //CHANGE?
+            let currentUserEmail = FIRAuth.auth()?.currentUser?.email //CHANGE? (Until we get Users Working!)
+            
             self.usersRef.child(currentUserID!).observeSingleEvent(of: .value, with: { (snapshot) in
-                let firstName = (snapshot.value as! NSDictionary)["firstName"] as! String
-                let lastName = (snapshot.value as! NSDictionary)["lastName"] as! String
+                let firstName = (snapshot.value as! NSDictionary)["firstName"] as! String //HARDCODE BELOW
+                let lastName = (snapshot.value as! NSDictionary)["lastName"] as! String //HARDCODE BELOW
+                firstName = "Bob"
+                lastName = "Smith"
                 
-                let rideInformationItem = RideInformationItem(departure: self.departureTextField.text!, arrival: self.arrivalTextField.text!, date: self.dateTextField.text!, time: self.timeTextField.text!, seatsAvailable: Int(self.seatsAvailTextField.text!)!, driverName: firstName + " " + lastName, driverEmail: currentUserEmail!, isRequested: 0, isAccepted: 0, isDenied: 0)
+                let rideInformationItem = RideInformationItem(Departure: self.dateTextField, ComingFrom: "Houghton", DriverPhone: "773-202-5862", DepartureTime: self.departureTextField, NumSeatsAvailable: Int(self.seatsAvailTextField.text!)!, NumSeatsTotal: 4, Price: 50.00, key: String = "", DriverName: firstName + " " + lastName, DriveEmail: currentUserEmail!, Comment: "This is a comment! TEST", DriverCapacity: "Lots", DriverCar: "2006 Ford F-150", GoingTo: "Detroit")
+                
+               // let rideInformationItem = RideInformationItem(departure: self.departureTextField.text!, arrival: self.arrivalTextField.text!, date: self.dateTextField.text!, time: self.timeTextField.text!, seatsAvailable: Int(self.seatsAvailTextField.text!)!, driverName: firstName + " " + lastName, driverEmail: currentUserEmail!, isRequested: 0, isAccepted: 0, isDenied: 0)
+                
                 print("hereeeeeeeeeee \(rideInformationItem)")
                 let rideInformationItemRef = self.ref.child(self.departureTextField.text! + " to " + self.arrivalTextField.text!)
                 rideInformationItemRef.setValue(rideInformationItem.toAnyObject())
