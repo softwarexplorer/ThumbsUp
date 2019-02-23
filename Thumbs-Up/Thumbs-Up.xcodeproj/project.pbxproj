@@ -14,6 +14,8 @@
 		34804D622220F165009A7A38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 34804D612220F165009A7A38 /* Assets.xcassets */; };
 		34804D652220F165009A7A38 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34804D632220F165009A7A38 /* LaunchScreen.storyboard */; };
 		34804D702220F165009A7A38 /* Thumbs_UpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34804D6F2220F165009A7A38 /* Thumbs_UpTests.swift */; };
+		348C2AA82221C941007F92A5 /* RidesList.xib in Resources */ = {isa = PBXBuildFile; fileRef = 348C2AA72221C941007F92A5 /* RidesList.xib */; };
+		348C2AAA2221CE4F007F92A5 /* CreateRide.xib in Resources */ = {isa = PBXBuildFile; fileRef = 348C2AA92221CE4F007F92A5 /* CreateRide.xib */; };
 		BF09500B3831A334CD68F361 /* Pods_Thumbs_UpTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 049DB378B022FB28BBA7655E /* Pods_Thumbs_UpTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -39,6 +41,8 @@
 		34804D6B2220F165009A7A38 /* Thumbs-UpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Thumbs-UpTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34804D6F2220F165009A7A38 /* Thumbs_UpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thumbs_UpTests.swift; sourceTree = "<group>"; };
 		34804D712220F165009A7A38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		348C2AA72221C941007F92A5 /* RidesList.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RidesList.xib; sourceTree = "<group>"; };
+		348C2AA92221CE4F007F92A5 /* CreateRide.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CreateRide.xib; sourceTree = "<group>"; };
 		3E81C7CEF324190C0B213812 /* Pods_Thumbs_Up.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thumbs_Up.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		421BA093091382A8D8355F04 /* Pods-Thumbs-Up.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thumbs-Up.debug.xcconfig"; path = "Target Support Files/Pods-Thumbs-Up/Pods-Thumbs-Up.debug.xcconfig"; sourceTree = "<group>"; };
 		5A29B98227F452B0F59214D5 /* Pods-Thumbs-Up.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Thumbs-Up.release.xcconfig"; path = "Target Support Files/Pods-Thumbs-Up/Pods-Thumbs-Up.release.xcconfig"; sourceTree = "<group>"; };
@@ -74,7 +78,6 @@
 				BE63BB2E080E200968994883 /* Pods-Thumbs-UpTests.debug.xcconfig */,
 				60D119E84B4845656FD5A013 /* Pods-Thumbs-UpTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -107,6 +110,8 @@
 				34804D612220F165009A7A38 /* Assets.xcassets */,
 				34804D632220F165009A7A38 /* LaunchScreen.storyboard */,
 				34804D662220F165009A7A38 /* Info.plist */,
+				348C2AA72221C941007F92A5 /* RidesList.xib */,
+				348C2AA92221CE4F007F92A5 /* CreateRide.xib */,
 			);
 			path = "Thumbs-Up";
 			sourceTree = "<group>";
@@ -214,6 +219,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				34804D652220F165009A7A38 /* LaunchScreen.storyboard in Resources */,
+				348C2AAA2221CE4F007F92A5 /* CreateRide.xib in Resources */,
+				348C2AA82221C941007F92A5 /* RidesList.xib in Resources */,
 				34804D622220F165009A7A38 /* Assets.xcassets in Resources */,
 				34804D602220F164009A7A38 /* Main.storyboard in Resources */,
 			);
