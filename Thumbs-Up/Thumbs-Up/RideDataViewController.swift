@@ -17,17 +17,23 @@ class RideDataViewController: UIViewController {
         print("Hi there!!!!!!!!!!!")
         var reference : DatabaseReference!
         reference = Database.database().reference()
-        _ = reference.child("Drivers").observeSingleEvent(of: .value) { (snapshot) in
-            let value  = snapshot.value as? NSDictionary;
+        _ = reference.child("Drivers").child("Driver01").observeSingleEvent(of: .value) { (snapshot) in
+            let value  = snapshot.value as? [String : AnyObject] ?? [:]
             print("Here.......")
-            var mainView = UIView()
-//            mainView.
-//            func numberOfSections(in tableView: UITableView) -> Int {
-//                return 1
-//            }
-//            func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//                var howMany = value?.allKeys.count
-//                return howMany
+            print(value)
+            
+            for data in value{
+                let textViewKey = UITextView(frame: CGRect(x: 20.0, y: 25.0, width: 250.0, height: 100.0))
+                let textViewValue = UITextView(frame: CGRect(x: 20.0, y: 35.0, width: 250.0, height: 100.0))
+                textViewKey.center = self.view.center
+                textViewValue.center = self.view.center
+                textViewKey.text = data.key
+                textViewValue.text = data.value.string
+//                print(textViewValue)
+                
+                self.view.addSubview(textViewKey)
+//                self.view.addSubview(textViewValue)
+            }
             }
 
         };
