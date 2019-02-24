@@ -18,8 +18,14 @@ class ViewController: UIViewController {
     }
     @IBAction func findRideButton(_ sender: Any) {
         performSegue(withIdentifier: "ViewRides", sender: self)
+        
     }
     
+    @IBAction func postRideButton(_ sender: Any) {
+        performSegue(withIdentifier: "postRide", sender: self)
+        
+    }
+
 
 }
 
