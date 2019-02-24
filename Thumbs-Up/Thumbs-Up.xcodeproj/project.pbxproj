@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		23D767CE30EA2F561D19EDEF /* Pods_Thumbs_Up.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E81C7CEF324190C0B213812 /* Pods_Thumbs_Up.framework */; };
-		346A47522221F1D80030B290 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 346A47512221F1D80030B290 /* GoogleService-Info.plist */; };
+		33147C62222262F30075DBF7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 33147C61222262F30075DBF7 /* GoogleService-Info.plist */; };
+		33147C652222632E0075DBF7 /* PostRideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33147C632222632E0075DBF7 /* PostRideViewController.swift */; };
+		33147C662222632E0075DBF7 /* RideInformationItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33147C642222632E0075DBF7 /* RideInformationItem.swift */; };
 		34804D5B2220F164009A7A38 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34804D5A2220F164009A7A38 /* AppDelegate.swift */; };
 		34804D5D2220F164009A7A38 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34804D5C2220F164009A7A38 /* ViewController.swift */; };
 		34804D602220F164009A7A38 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 34804D5E2220F164009A7A38 /* Main.storyboard */; };
@@ -32,7 +34,9 @@
 
 /* Begin PBXFileReference section */
 		049DB378B022FB28BBA7655E /* Pods_Thumbs_UpTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Thumbs_UpTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		346A47512221F1D80030B290 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		33147C61222262F30075DBF7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		33147C632222632E0075DBF7 /* PostRideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PostRideViewController.swift; path = "../../../../../../Downloads/WinterWonderHack2019/ThumbsUp/Thumbs-Up/Thumbs-Up/PostRideViewController.swift"; sourceTree = "<group>"; };
+		33147C642222632E0075DBF7 /* RideInformationItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RideInformationItem.swift; path = "../../../../../../Downloads/WinterWonderHack2019/ThumbsUp/Thumbs-Up/Thumbs-Up/RideInformationItem.swift"; sourceTree = "<group>"; };
 		34804D572220F164009A7A38 /* Thumbs-Up.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Thumbs-Up.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		34804D5A2220F164009A7A38 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		34804D5C2220F164009A7A38 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -106,14 +110,16 @@
 		34804D592220F164009A7A38 /* Thumbs-Up */ = {
 			isa = PBXGroup;
 			children = (
+				33147C61222262F30075DBF7 /* GoogleService-Info.plist */,
 				34804D5A2220F164009A7A38 /* AppDelegate.swift */,
 				34804D5C2220F164009A7A38 /* ViewController.swift */,
+				33147C632222632E0075DBF7 /* PostRideViewController.swift */,
+				33147C642222632E0075DBF7 /* RideInformationItem.swift */,
 				34804D5E2220F164009A7A38 /* Main.storyboard */,
 				34804D632220F165009A7A38 /* LaunchScreen.storyboard */,
 				34804D662220F165009A7A38 /* Info.plist */,
 				348C2AA92221CE4F007F92A5 /* CreateRide.xib */,
 				348C2AAF2221D680007F92A5 /* RideDataViewController.swift */,
-				346A47512221F1D80030B290 /* GoogleService-Info.plist */,
 				34A1BC932222562E00EA50B0 /* Images.xcassets */,
 			);
 			path = "Thumbs-Up";
@@ -223,8 +229,8 @@
 			files = (
 				34804D652220F165009A7A38 /* LaunchScreen.storyboard in Resources */,
 				34A1BC942222562E00EA50B0 /* Images.xcassets in Resources */,
+				33147C62222262F30075DBF7 /* GoogleService-Info.plist in Resources */,
 				348C2AAA2221CE4F007F92A5 /* CreateRide.xib in Resources */,
-				346A47522221F1D80030B290 /* GoogleService-Info.plist in Resources */,
 				34804D602220F164009A7A38 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,9 +322,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				33147C652222632E0075DBF7 /* PostRideViewController.swift in Sources */,
 				34804D5D2220F164009A7A38 /* ViewController.swift in Sources */,
 				34804D5B2220F164009A7A38 /* AppDelegate.swift in Sources */,
 				348C2AB02221D680007F92A5 /* RideDataViewController.swift in Sources */,
+				33147C662222632E0075DBF7 /* RideInformationItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
