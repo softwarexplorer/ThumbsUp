@@ -22,6 +22,9 @@
                                 <rect key="frame" x="106" y="132" width="162" height="66"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Find a Ride"/>
+                                <connections>
+                                    <action selector="findRideButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dNR-PK-Uyo"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bkz-Pp-R3S">
                                 <rect key="frame" x="106" y="390" width="162" height="66"/>
@@ -35,11 +38,27 @@
                     <connections>
                         <outlet property="findRide" destination="ffh-HR-5kk" id="Z6v-F9-Fcc"/>
                         <outlet property="submitRide" destination="Bkz-Pp-R3S" id="4jK-3m-u12"/>
+                        <segue destination="pn0-Og-yeo" kind="presentation" identifier="ViewRides" id="6qD-aS-jJh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="124.58770614692655"/>
+        </scene>
+        <!--Ride Data View Controller-->
+        <scene sceneID="pVH-so-qM6">
+            <objects>
+                <viewController id="pn0-Og-yeo" customClass="RideDataViewController" customModule="Thumbs_Up" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ftm-qa-E4k">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="7Dn-jG-7dr"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xce-Xo-RJk" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="849" y="125"/>
         </scene>
     </scenes>
 </document>

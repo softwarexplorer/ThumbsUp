@@ -16,7 +16,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
+    @IBAction func findRideButton(_ sender: Any) {
+        performSegue(withIdentifier: "ViewRides", sender: self)
+    }
+    
 
 }
 
