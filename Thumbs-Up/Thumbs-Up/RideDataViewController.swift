@@ -20,7 +20,8 @@ class RideDataViewController: UIViewController {
         _ = reference.child("Drivers").observeSingleEvent(of: .value) { (snapshot) in
             let value  = snapshot.value as? NSDictionary;
             print("Here.......")
-            print(value)
+            var mainView = UIView()
+//            mainView.
 //            func numberOfSections(in tableView: UITableView) -> Int {
 //                return 1
 //            }
